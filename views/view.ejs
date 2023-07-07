@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="to_do.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+    <h1>today is <%= kindofday %> </h1>
+    <div class="form">
+        
+        <form action="/" method="post">
+            <lable for="data">
+                <input type="text" name="data" placeholder="enter todo item" required>
+                <button type="submit" class="button">Add</button> 
+                <a href="/work">workList</a>
+            </lable>
+        </form>
+        <ul>
+        <% for(var i=0; i<add.length; i++){ %>
+            <h3><li><%= add[i] %></li></h3>
+        <% } %>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
